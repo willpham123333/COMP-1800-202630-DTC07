@@ -1,4 +1,4 @@
-# Elmo Hikes
+    # Elmo Hikes
 
 
 ## Overview
@@ -66,7 +66,12 @@ elmo-hikes/
 
 
 ## Contributors
+<<<<<<< HEAD
 - **Rudransh kapoor** - BCIT CST Student with a passion for cars and travelling.
+=======
+- **Braden Kennedy** - BCIT CST Student, previous experience in software engineering & system design etc. Fun fact: Has a cat with 3 legs
+- **William Pham** - BCIT CST Student, I am a self learn programmer> I love working on back-end. Front-end is not my specialty but I like learning about the syntax. Fun Fact: I have a pet french bull dog that is quite fat.
+>>>>>>> develop
 
 
 ## Acknowledgments
