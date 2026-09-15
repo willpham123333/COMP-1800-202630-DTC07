@@ -1,4 +1,4 @@
-# Elmo Hikes
+    # Elmo Hikes
 
 
 ## Overview
@@ -66,7 +66,7 @@ elmo-hikes/
 
 
 ## Contributors
-- **William Pham** - BCIT CST Student, I am a self taugh programmer. I learned mainly python, java, html and sql. These are all in novice levels, fun fact: I have a french bull dog.
+- **Your Name** - BCIT CST Student with a passion for outdoor adventures and user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
 - **Teammate Name** - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
 
 ---
