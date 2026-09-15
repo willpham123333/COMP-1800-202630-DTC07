@@ -1,4 +1,4 @@
-# Elmo Hikes
+    # Elmo Hikes
 
 
 ## Overview
@@ -66,7 +66,7 @@ elmo-hikes/
 
 
 ## Contributors
-- **Your Name** - BCIT CST Student with a passion for outdoor adventures and user-friendly applications. Fun fact: Loves solving Rubik's Cubes in under a minute.
+- **William Pham** - BCIT CST Student, I am a self learn programmer> I love working on back-end. Front-end is not my specialty but I like learning about the syntax. Fun Fact: I have a pet french bull dog that is quite fat.
 - **Teammate Name** - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
 
 ---
