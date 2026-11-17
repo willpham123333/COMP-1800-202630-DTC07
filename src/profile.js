@@ -1,15 +1,16 @@
+import { requireUser, readSummary } from "./learning.js";
 
-import { auth } from "./firebaseAPI.js";
-import { onAuthStateChanged } from "firebase/auth";
-
-onAuthStateChanged(auth, function(user) {
-    if (user) {
-        document.getElementById("profile-name").textContent =
-            user.displayName || "Learner";
-
-        document.getElementById("profile-email").textContent =
-            user.email || "";
-    } else {
-        window.location.href = "login.html";
+requireUser(async function (user) {
+    document.getElementById("profile-name").textContent = user.displayName || "Learner";
+    document.getElementById("profile-email").textContent = user.email || "";
+    try {
+        const summary = await readSummary(user);
+        document.getElementById("profile-completed").textContent = summary.completed;
+        document.getElementById("profile-started").textContent = summary.started;
+        document.getElementById("profile-bar").style.width = summary.percent + "%";
+        document.getElementById("profile-bar").textContent = summary.completedTasks + " of " + summary.totalTasks + " tasks";
+    } catch (error) {
+        document.getElementById("profile-message").textContent = "Could not load your saved progress. Please refresh to try again.";
+        console.error(error);
     }
 });

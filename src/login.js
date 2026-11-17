@@ -17,7 +17,7 @@ loginForm.addEventListener("submit", async function(event) {
         await signInWithEmailAndPassword(auth, email, password);
 
         // Redirect after successful login
-        window.location.href = "index.html";
+        window.location.href = "skill.html";
 
     } catch (error) {
         errorMessage.textContent =
