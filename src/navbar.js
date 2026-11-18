@@ -7,8 +7,11 @@ const navbar = document.querySelector("nav");
 if (navbar) {
     navbar.innerHTML = `
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Skillingo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <a class="navbar-brand fw-bold" href="index.html">
+            <img src="images/logo.png" alt="Skillingo Logo" width="100">
+            Skillingo</a>
+                            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarMenu" aria-controls="navbarMenu"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
