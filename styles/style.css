@@ -1,1 +1,95 @@
+body {
+    background-color: #F5F3FF !important;
+}
+
+.navbar {
+    background-color: #FFFFFF !important;
+}
+
+.navbar-brand {
+    color: #6B21A8 !important;
+}
+
+.btn-light {
+    background-color: #E9D5FF;
+    color: #6B21A8;
+}
+
+.btn-dark {
+    background-color: #9333EA;
+    border-color: #9333EA;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #6B21A8;
+    border-color: #6B21A8;
+}
+
+.button{
+    background-color: #9333EA;
+    border-color: #9333EA;
+    color: white;
+}
+
+/* Lesson page */
+
+#lesson-name {
+    color: #6B21A8;
+}
+
+#lesson-bar {
+    background-color: #9333EA !important;
+}
+
+#lesson-progress {
+    color: #6B21A8;
+}
+
+#task-list .card {
+    background-color: white;
+    border-color: #E9D5FF;
+}
+
+#task-list .btn-success:disabled {
+    background-color: #DCFCE7;
+    color: #15803D;
+    border-color: #DCFCE7;
+    opacity: 1;
+}
+
+/* Progress Page */
+
+#completed-count,
+#started-count,
+#total-count {
+    color: #9333EA;
+}
+
+#overall-percent {
+    color: #6B21A8;
+}
+
+#overall-bar {
+    background-color: #9333EA !important;
+}
+
+.progress {
+    background-color: #E9D5FF;
+}
+
+.btn-outline-dark {
+    color: #9333EA;
+    border-color: #9333EA;
+}
+
+.btn-outline-dark:hover {
+    background-color: #9333EA;
+    border-color: #9333EA;
+    color: white;
+}
+
+#profile-bar {
+    background-color: #9333EA !important;
+}
 
