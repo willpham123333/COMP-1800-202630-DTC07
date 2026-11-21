@@ -52,7 +52,12 @@ function displayProgress(progress, user) {
         }
         container.appendChild(card);
     });
-    if (completed.length === tasks.length) message.textContent = "Skill completed! Your achievement is saved in Firestore.";
+    if (completed.length === tasks.length) {
+    message.textContent = "Skill completed! Your achievement is saved in Firestore.";
+    document.getElementById("skill-badge").classList.remove("d-none");
+} else {
+    document.getElementById("skill-badge").classList.add("d-none");
+}
 }
 
 requireUser(async function (user) {
