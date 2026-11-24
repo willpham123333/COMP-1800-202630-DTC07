@@ -7,6 +7,38 @@ const skillId = params.get("docID");
 const message = document.getElementById("lesson-message");
 let saving = false;
 
+const learningContent = {
+    "cooking-basics": [
+        "Wash your hands with soap and water for at least 20 seconds. Clean the kitchen counter and utensils before preparing food.",
+
+        "Choose a beginner-friendly recipe. Read the instructions carefully and gather all the ingredients and equipment before starting.",
+
+        "Follow the recipe step by step. Use a food thermometer when needed and keep raw meat separate from other ingredients.",
+
+        "Wash the dishes and clean the cooking area. Store leftovers in sealed containers and refrigerate them within two hours."
+    ],
+
+    "household-basics": [
+        "Start with a small area, such as your desk or a drawer. Remove unnecessary items to make cleaning easier.",
+
+        "Separate items into things to keep, donate or throw away. Return useful items to their proper places.",
+
+        "Use suitable cleaning products for each surface. Follow the instructions on the label and never mix cleaning products.",
+
+        "Create a weekly cleaning schedule. Set a reminder on your phone to keep your space clean and organized."
+    ],
+
+    "time-management": [
+        "Write down everything you need to accomplish today. Break larger tasks into smaller, manageable steps.",
+
+        "Identify your most important task based on its urgency and deadline. Estimate how much time it will take.",
+
+        "Try the Pomodoro technique. Work for 25 minutes without distractions, followed by a 5-minute break.",
+
+        "Review the tasks you completed today. Identify what distracted you and decide how to improve tomorrow."
+    ]
+};
+
 function displayProgress(progress, user) {
     const tasks = tasksFor(skillId);
     const completed = progress.completedTasks || [];
@@ -20,6 +52,7 @@ function displayProgress(progress, user) {
         const taskId = "task-" + (index + 1);
         const card = template.content.cloneNode(true);
         card.querySelector(".task-title").textContent = (index + 1) + ". " + task;
+        card.querySelector(".task-description").textContent = learningContent[skillId][index];
         const button = card.querySelector("button");
         if (completed.includes(taskId)) {
             button.textContent = "Completed";

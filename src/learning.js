@@ -73,17 +73,23 @@ export async function completeTask(user, skillId, taskId, taskName) {
         updatedAt: serverTimestamp()
     }, { merge: true });
     const progress = await readProgress(user, skillId);
-    if (progress.completedTasks.length === tasksFor(skillId).length && !progress.completedAt) {
+    if (progress.completedTasks.length === tasksFor(skillId).length) {
+    if (!progress.completedAt) {
         await setDoc(progressRef(user, skillId), {
             completedAt: serverTimestamp()
         }, { merge: true });
     }
+
+    await setDoc(doc(db, "USER", user.uid), {
+        badges: arrayUnion(skillId)
+    }, { merge: true });
+}
     return progress;
 }
 
 export async function readSummary(user) {
     const skills = await getDocs(collection(db, "skills"));
-    const progress = await getDocs(collection(db, "User", user.uid, "skills"));
+    const progress = await getDocs(collection(db, "USER", user.uid, "skills"));
     let completed = 0;
     let started = 0;
     let completedTasks = 0;
