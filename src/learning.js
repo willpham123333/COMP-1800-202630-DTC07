@@ -40,7 +40,7 @@ export function tasksFor(skillId) {
 }
 
 export function progressRef(user, skillId) {
-    return doc(db, "UserProgress", user.uid, "skills", skillId);
+    return doc(db, "USER", user.uid, "skills", skillId);
 }
 
 export async function readProgress(user, skillId) {
@@ -83,7 +83,7 @@ export async function completeTask(user, skillId, taskId, taskName) {
 
 export async function readSummary(user) {
     const skills = await getDocs(collection(db, "skills"));
-    const progress = await getDocs(collection(db, "UserProgress", user.uid, "skills"));
+    const progress = await getDocs(collection(db, "User", user.uid, "skills"));
     let completed = 0;
     let started = 0;
     let completedTasks = 0;

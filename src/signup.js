@@ -1,9 +1,12 @@
 
-import { auth } from "./firebaseAPI.js";
+import { auth, db} from "./firebaseAPI.js";
 import {
     createUserWithEmailAndPassword,
     updateProfile
 } from "firebase/auth";
+import{doc,
+    setDoc,
+    serverTimestamp} from "firebase/firestore";
 
 const signupForm = document.getElementById("signup-form");
 
@@ -25,6 +28,12 @@ signupForm.addEventListener("submit", async function(event) {
         await updateProfile(userCredential.user, {
             displayName: fullName
         });
+        await setDoc(doc(db, "USER", userCredential.user.uid), {
+    name: fullName,
+    email: email,
+    createdAt: serverTimestamp(),
+    badges: []
+});
 
         window.location.href = "profile.html";
 
